@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PyTest",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-q"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "CUDA_VISIBLE_DEVICES": "0"
+      }
+    }
+  ],
+  "inputs": []
+}

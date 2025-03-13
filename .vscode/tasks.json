@@ -6,16 +6,16 @@
       "type": "shell",
       "command": "pytest",
       "args": [],
-      "options": {
-        "env": {
-            "CUDA_VISIBLE_DEVICES": "0",
-            "PYTHONPATH": "${workspaceFolder}/src"
-          }
-      },
       "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": false
+      },
+      "options": {
+        "env": {
+          "CUDA_VISIBLE_DEVICES": "0",
+          "PYTHONPATH": "${workspaceFolder}/src"
+        }
       }
     }
   ],

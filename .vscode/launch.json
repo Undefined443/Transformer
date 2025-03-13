@@ -2,11 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "PyTest",
+      "name": "Run Tests",
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
-      "args": ["-q"],
+      "args": [],
       "console": "integratedTerminal",
       "justMyCode": true,
       "env": {

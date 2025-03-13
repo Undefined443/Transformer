@@ -5,6 +5,15 @@
 
 ## 环境
 
+- python=3.7
+- tensorflow=2.4
+- numpy=1.19
+- pytest=7.4
+
+```sh
+conda env create -f environment.yml
+```
+
 ## 测试
 
 ```sh

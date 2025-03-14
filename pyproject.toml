@@ -1,6 +1,17 @@
+[project]
+name = "transformer"
+version = "1.0.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "numpy~=1.19.0",
+    "pytest>=7.4.4",
+    "tensorflow~=2.4.0",
+]
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]
-pythonpath = "src"
+pythonpath = ["src", "tests"]
 [tool.black]
 line-length = 120
 target-version = ['py37']

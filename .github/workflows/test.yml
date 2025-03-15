@@ -15,15 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3.0.4
+        run: |
+          echo $CONDA/bin >> $GITHUB_PATH
       - name: Install dependencies
         run: |
-          conda env create -f environment.yml
-          conda install -n transformer flake8
+          conda env update --file environment.yml --name base
       - name: Lint with flake8
         run: |
-          conda run -n transformer flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          conda run -n transformer flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+          conda install flake8
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          conda run -n transformer pytest
+          conda install pytest
+          pytest
